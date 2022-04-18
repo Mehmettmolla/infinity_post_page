@@ -5,4 +5,4 @@ Posts Page
 ![posts](showcase/Ss1.png)
 
 Comments Page
-![comments](showcase/Ss1.png)
+![comments](showcase/Ss2.png)
