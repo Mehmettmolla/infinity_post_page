@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:social_media/cubit/comments_cubit/comment_cubit.dart';
+import 'package:social_media/cubit/comment_cubit/comment_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social_media/posts/widgets/card/comment_card.dart';
 

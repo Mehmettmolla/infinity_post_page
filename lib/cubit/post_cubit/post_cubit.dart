@@ -1,18 +1,17 @@
-import 'package:social_media/features/home/services/posts_service.dart';
+import 'package:social_media/features/home/services/post_service.dart';
 import 'package:social_media/posts/models/post_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-part 'posts_state.dart';
+part 'post_state.dart';
 
-class PostsCubit extends Cubit<PostsState> {
-  PostsCubit(this.repository) : super(PostsInitial());
+class PostCubit extends Cubit<PostState> {
+  PostCubit(this.repository) : super(PostsInitial());
 
   int page = 1;
-  final PostsService repository;
+  final PostService repository;
 
   void loadPosts() {
     if (state is PostsLoading) return;
-
     final currentState = state;
 
     var oldPosts = <PostModel>[];

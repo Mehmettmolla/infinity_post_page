@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:social_media/cubit/comments_cubit/comment_cubit.dart';
-import 'package:social_media/cubit/posts_cubit/posts_cubit.dart';
+import 'package:social_media/cubit/comment_cubit/comment_cubit.dart';
+import 'package:social_media/cubit/post_cubit/post_cubit.dart';
 import 'package:social_media/features/home/view/post_details_view.dart';
 import 'package:social_media/posts/models/post_model.dart';
 
@@ -16,12 +16,12 @@ class PostsView extends StatefulWidget {
 
 class _PostsViewState extends State<PostsView> {
   final scrollController = ScrollController();
-
+  final String appBarTitle = "Good Morning, Alex";
   void setupScrollController(context) {
     scrollController.addListener(() {
       if (scrollController.position.atEdge) {
         if (scrollController.position.pixels != 0) {
-          BlocProvider.of<PostsCubit>(context).loadPosts();
+          BlocProvider.of<PostCubit>(context).loadPosts();
         }
       }
     });
@@ -29,13 +29,13 @@ class _PostsViewState extends State<PostsView> {
   @override
   Widget build(BuildContext context) {
     setupScrollController(context);
-    BlocProvider.of<PostsCubit>(context).loadPosts();
+    BlocProvider.of<PostCubit>(context).loadPosts();
     return Scaffold(
       appBar: AppBar(
         title: Row(
           children: [
             Text(
-              "Good Morning, Alex",
+              appBarTitle,
               style: Theme.of(context).primaryTextTheme.headline6,
             ),
             Spacer(),
@@ -49,7 +49,7 @@ class _PostsViewState extends State<PostsView> {
   }
 
   Widget _postList() {
-    return BlocBuilder<PostsCubit, PostsState>(builder: (context, state) {
+    return BlocBuilder<PostCubit, PostState>(builder: (context, state) {
       if (state is PostsLoading && state.isFirstFetch) {
         return _loadingIndicator();
       }

@@ -3,6 +3,7 @@ import 'package:social_media/posts/models/post_model.dart';
 
 class PostCard extends StatelessWidget {
   final PostModel post;
+  final String nameTitle ="Tony Monta";
 
   const PostCard({Key? key, required this.post}) : super(key: key);
   @override
@@ -39,7 +40,7 @@ class PostCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Tony Monta",
+              nameTitle,
               style: Theme.of(context).textTheme.headline6,
             ),
             Text("1h ago", style: Theme.of(context).textTheme.bodyText2),

@@ -1,16 +1,16 @@
-part of 'posts_cubit.dart';
+part of 'post_cubit.dart';
 
-abstract class PostsState {}
+abstract class PostState {}
 
-class PostsInitial extends PostsState {}
+class PostsInitial extends PostState {}
 
-class PostsLoaded extends PostsState {
+class PostsLoaded extends PostState {
   final List<PostModel> posts;
 
   PostsLoaded(this.posts);
 }
 
-class PostsLoading extends PostsState {
+class PostsLoading extends PostState {
   final List<PostModel> oldPosts;
   final bool isFirstFetch;
 

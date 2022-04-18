@@ -4,7 +4,7 @@ import 'package:social_media/core/constants/fetch_limit/fetch_limit_constant.dar
 import 'package:social_media/posts/models/post_model.dart';
 import 'dart:io';
 
-class PostsService {
+class PostService {
   Future<List<PostModel>> fetchPosts(int page) async {
     var dio = Dio();
     final response = await dio.get(ServicePathEnum.BASE_URL.rawValue +
