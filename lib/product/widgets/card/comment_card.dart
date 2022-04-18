@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:social_media/posts/models/comment_model.dart';
+import 'package:social_media/product/models/comment_model.dart';
 
 class CommentCard extends StatelessWidget {
   final CommentModel comment;

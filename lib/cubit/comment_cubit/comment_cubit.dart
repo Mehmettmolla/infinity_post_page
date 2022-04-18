@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:social_media/features/home/services/comments_service.dart';
-import 'package:social_media/posts/models/comment_model.dart';
+import 'package:social_media/product/models/comment_model.dart';
 
 part 'comment_state.dart';
 

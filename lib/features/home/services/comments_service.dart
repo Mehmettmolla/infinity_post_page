@@ -2,7 +2,7 @@ import 'dart:developer';
 import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:social_media/core/constants/enums/service_path_enum.dart';
-import 'package:social_media/posts/models/comment_model.dart';
+import 'package:social_media/product/models/comment_model.dart';
 
 class CommentService {
 

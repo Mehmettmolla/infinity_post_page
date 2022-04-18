@@ -1,5 +1,5 @@
 import 'package:social_media/features/home/services/post_service.dart';
-import 'package:social_media/posts/models/post_model.dart';
+import 'package:social_media/product/models/post_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'post_state.dart';

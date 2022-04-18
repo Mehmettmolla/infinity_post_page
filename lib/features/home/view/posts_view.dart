@@ -3,11 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social_media/cubit/comment_cubit/comment_cubit.dart';
 import 'package:social_media/cubit/post_cubit/post_cubit.dart';
 import 'package:social_media/features/home/view/post_details_view.dart';
-import 'package:social_media/posts/models/post_model.dart';
+import 'package:social_media/product/models/post_model.dart';
+import 'package:social_media/product/widgets/card/post_card.dart';
 
 import 'dart:async';
 
-import 'package:social_media/posts/widgets/card/post_card.dart';
+
 
 class PostsView extends StatefulWidget {
   @override

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:social_media/posts/widgets/comment_list/comments_list.dart';
-import 'package:social_media/posts/models/post_model.dart';
-import 'package:social_media/posts/widgets/card/post_card.dart';
+import 'package:social_media/product/widgets/comment_list/comments_list.dart';
+import 'package:social_media/product/models/post_model.dart';
+import 'package:social_media/product/widgets/card/post_card.dart';
 
 class PostDetailsView extends StatelessWidget {
   final PostModel post;
